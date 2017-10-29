@@ -88,5 +88,9 @@ int main()
     fclose(pfBack);
     fclose(pfOut);
 
+    delete[] psrc;
+    delete[] pback;
+    delete[] pout;
+
     return 0;
 }
