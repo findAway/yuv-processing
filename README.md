@@ -8,15 +8,18 @@
 - yuv-overlay/yuv444_420: 底图yuv420p，叠加yuv444p格式的图片。底图先转换为yuv444p再处理。
 
 ## yuv-overlay
-此目录下各项为以不同yuv格式将一张文字图片叠加到背景图片上，各种不同yuv格式的叠加效果如下：
+此目录下各项为以不同yuv格式将一张文字图片叠加到背景图片上。背景图片为一张纯色的bmp图片，文字bmp图片为firework制作（注意不要消除锯齿）。之后通过ffmpeg将bmp图片转换为需要的yuv格式图片。各种不同yuv格式的叠加效果如下：
 
 - 文字图片及背景图片都是yuv420p格式。
+
 ![image](https://raw.githubusercontent.com/findAway/yuv-processing/master/yuv-overlay/overlay_420.bmp)
 
 - 文字图片及背景图片都是yuv444p格式。
+
 ![image](https://raw.githubusercontent.com/findAway/yuv-processing/master/yuv-overlay/overlay_444.bmp)
 
 - 文字为yuv444p格式，背景为yuv420p格式。背景转换为yuv444p格式后再叠加。叠加后再转换为yuv420p输出。
+
 ![image](https://raw.githubusercontent.com/findAway/yuv-processing/master/yuv-overlay/overlay_420_444.bmp)
 
 从叠加后的输出图像效果看，上面第2种最好，第3种次之，第1种最差。
