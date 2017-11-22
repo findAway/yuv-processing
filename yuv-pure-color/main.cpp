@@ -2,17 +2,23 @@
 #include <stdio.h>
 #include <string.h>
 
-const char* const outfile = "out.yuv";
+const char* const outfile = "444.yuv";
 
 int main()
 {
     using namespace std;
-    const int w = 352;
-    const int h = 288;
+    int w = 352;
+    int h = 288;
 
     unsigned int Y = 0;
     unsigned int U = 0;
     unsigned int V = 0;
+
+    cout << "set the width:";
+    cin >> w;
+
+    cout << "set the height:";
+    cin >> h;
 
     cout << "set the value of y (from 0 to 255):";
     cin >> Y;

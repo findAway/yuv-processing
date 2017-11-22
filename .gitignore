@@ -1,4 +1,3 @@
 *.out
-*out.yuv
-out*.yuv
+*.yuv*
 *temp*
